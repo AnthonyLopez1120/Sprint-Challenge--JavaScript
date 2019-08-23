@@ -113,11 +113,17 @@ console.log(contactInfo);
 const unisWithUni = [];
 
 for (let i = 0; i< graduates.length; i++){
-  if(graduates[i].university === 'University'){
-   unisWithUni.push(graduates[i]);
+  if(graduates[i].university === graduates.includes('Uni')){
+  //return graduates[i];
+  //unisWithUni.push(graduates[i]);
   }
 }
-console.log(unisWithUni);/*****return to this later****** */
+
+
+
+console.log(unisWithUni);
+
+/*****return to this later****** */
 
 
 // ==== ADVANCED Array Methods ====
