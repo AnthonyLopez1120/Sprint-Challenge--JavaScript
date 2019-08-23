@@ -7,12 +7,36 @@
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
 
+function consume(a, b, cb){
+
+  return cb( a, b);
+}
+
+
+
 
 /* Step 2: Create several functions to callback with consume();
-  * Create a function named add that returns the sum of two numbers
-  * Create a function named multiply that returns the product of two numbers 
-  * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
+
+  * Create a function named add that returns the sum of two numbers */
+
+  const add =function(a, b){
+  return a + b;
+}
+console.log(consume(1, 2, add))
+
+  /* Create a function named multiply that returns the product of two numbers */
+  const mulitply =function(a, b){
+    return a * b;
+  }
+  console.log(consume(4, 2, mulitply))
+  /* Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+const greeting =function(first_name, last_name){
+  return "Hello, " + first_name + last_name + ", nice to meet you!";
+};
+
+console.log(consume(Anthony, Lopez, greeting));/*need to finish this one 
+
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
@@ -25,7 +49,7 @@
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation: 
+// Explanation: nestedfunction can access the variable internally because of the function scope. When a varible is listed withing a function, it can find the varible both inside and outside of the fuction. The oppisite however is not true. 
 
 
 const external = "I'm outside the function";
